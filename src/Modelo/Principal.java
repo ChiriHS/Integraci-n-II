@@ -3,13 +3,28 @@ package Modelo;
 import Controlador.ControladorAdmin;
 import DAO.Conexion;
 import DAO.DAOAdminImpl;
+import DAO.DAOAsistenciaImpl;
+import Interfaces.DAOAsistencia;
 import Vistas.Admin;
+import java.time.LocalDateTime;
 import javax.swing.JFrame;
 
 public class Principal {
 
     public static void main(String[] args) {
-
+        /*
+        Asistencia asistencia = new Asistencia();
+        asistencia.setUsuarioId(1);
+        asistencia.setHoraSalida(LocalDateTime.now());
+        
+        try {
+            DAOAsistencia asis = new DAOAsistenciaImpl();
+            asis.salida(asistencia);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } 
+        */
+        
         Admin vista = new Admin();          // 1. instanciar vista
         DAOAdminImpl dao = new DAOAdminImpl();  // 2. instanciar DAO
         ControladorAdmin controller = new ControladorAdmin(vista, dao); // 3. pasar vista al controlador

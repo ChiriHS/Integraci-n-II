@@ -6,24 +6,23 @@ import java.sql.SQLException;
 
 public class Conexion {
 
-    private static final String bd = "debruyne"; 
+    private static final String bd = "debruyne";
     private static final String url = "jdbc:mysql://localhost:3306/" + bd;
     private static final String usuario = "root";
     private static final String clave = "";
     Connection conexion = null;
-    
+
     public Connection Conectar() {
-        
-        try{
+
+        try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conexion = DriverManager.getConnection(url, usuario, clave);
-            System.out.println("Conexion exitosa con: "+bd);
-        } catch(ClassNotFoundException | SQLException error_conexion) {
-            System.out.println("Error al conectar: "+error_conexion.getMessage());
+            System.out.println("Conexion exitosa con: " + bd);
+        } catch (ClassNotFoundException | SQLException error_conexion) {
+            System.out.println("Error al conectar: " + error_conexion.getMessage());
         }
         return conexion;
     }
-
 
     public void cerrar() {
         try {
@@ -36,8 +35,7 @@ public class Conexion {
         }
     }
 
-    
     public String get_BD() {
         return bd;
-    };
-} 
+    }
+};

@@ -3,7 +3,6 @@ package Controlador;
 import Vistas.Admin;
 import DAO.DAOAdminImpl;
 import Modelo.Usuario;
-
 import javax.swing.*;
 import java.util.List;
 
@@ -47,7 +46,7 @@ public class ControladorAdmin {
     public void modificarUsuario() {
         try {
             Usuario u = new Usuario();
-            u.setId((Integer) vista.cmbID.getSelectedItem());
+            u.setId(Integer.parseInt((String) vista.cmbID.getSelectedItem()));
             u.setNombre(vista.txtNombre.getText());
             u.setEmail(vista.txtEmail.getText());
             u.setClave(new String(vista.txtClave.getPassword()));

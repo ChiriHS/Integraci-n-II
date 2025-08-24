@@ -14,7 +14,7 @@ public class ControladorAdmin {
     public ControladorAdmin(Admin vista, DAOAdminImpl usuarioDAO) {
         this.vista = vista;
         this.usuarioDAO = usuarioDAO;
-
+        
         // Eventos de los botones
         this.vista.btnRegistrar.addActionListener(e -> registrarUsuario());
         this.vista.btnModificar.addActionListener(e -> modificarUsuario());
@@ -24,7 +24,6 @@ public class ControladorAdmin {
 
         cargarUsuariosEnCombo();
     }
-
 
     public void registrarUsuario() {
         try {
@@ -111,6 +110,5 @@ public class ControladorAdmin {
             JOptionPane.showMessageDialog(vista, "Error cargando IDs: " + e.getMessage());
         }
     }
-  
-}
 
+}

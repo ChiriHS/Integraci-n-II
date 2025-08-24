@@ -3,10 +3,7 @@ package Modelo;
 import Controlador.ControladorAdmin;
 import DAO.Conexion;
 import DAO.DAOAdminImpl;
-import DAO.DAOAsistenciaImpl;
-import Interfaces.DAOAsistencia;
 import Vistas.Admin;
-import java.time.LocalDateTime;
 import javax.swing.JFrame;
 
 public class Principal {
@@ -23,8 +20,8 @@ public class Principal {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         } 
-        */
-        
+         */
+        /*
         Admin vista = new Admin();          // 1. instanciar vista
         DAOAdminImpl dao = new DAOAdminImpl();  // 2. instanciar DAO
         ControladorAdmin controller = new ControladorAdmin(vista, dao); // 3. pasar vista al controlador
@@ -32,10 +29,11 @@ public class Principal {
         Conexion obj_conexion = new Conexion();
         obj_conexion.Conectar();
 
-        JFrame frame = new JFrame("Panel Admin - Prueba");
+        JFrame frame = new JFrame("Panel Login - Prueba");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(700, 500);
         frame.add(vista);
         frame.setVisible(true);
+         */
     }
 }

@@ -198,11 +198,11 @@ public class Admin extends javax.swing.JPanel {
     private javax.swing.JPanel PFondo;
     public javax.swing.JButton btnBuscar;
     public javax.swing.JButton btnEliminar;
-    private javax.swing.JButton btnEntrada;
+    public javax.swing.JButton btnEntrada;
     public javax.swing.JButton btnLimpiar;
     public javax.swing.JButton btnModificar;
     public javax.swing.JButton btnRegistrar;
-    private javax.swing.JButton btnSalida;
+    public javax.swing.JButton btnSalida;
     public javax.swing.JComboBox<String> cmbID;
     public javax.swing.JComboBox<String> cmbRol;
     private javax.swing.JLabel jLabel1;

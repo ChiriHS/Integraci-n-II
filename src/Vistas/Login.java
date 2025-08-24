@@ -30,13 +30,15 @@ public class Login extends javax.swing.JPanel {
         pnlSesion = new javax.swing.JPanel();
         lblInicio = new javax.swing.JLabel();
         pwdContra = new javax.swing.JPasswordField();
-        txtNombre = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
         pnlLinea1 = new javax.swing.JPanel();
         btnSesion = new javax.swing.JButton();
         pnlLinea2 = new javax.swing.JPanel();
         iconPass = new javax.swing.JLabel();
         iconUser = new javax.swing.JLabel();
         pnlRojo = new javax.swing.JPanel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         PnlPrincipal.setBackground(new java.awt.Color(255, 255, 255));
         PnlPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -56,12 +58,12 @@ public class Login extends javax.swing.JPanel {
         pwdContra.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Clave", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 14), new java.awt.Color(204, 0, 0))); // NOI18N
         pnlSesion.add(pwdContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 330, 40));
 
-        txtNombre.setBackground(new java.awt.Color(255, 255, 255));
-        txtNombre.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        txtNombre.setForeground(new java.awt.Color(102, 102, 102));
-        txtNombre.setToolTipText("");
-        txtNombre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Email", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 14), new java.awt.Color(204, 0, 0))); // NOI18N
-        pnlSesion.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 330, 40));
+        txtEmail.setBackground(new java.awt.Color(255, 255, 255));
+        txtEmail.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        txtEmail.setForeground(new java.awt.Color(102, 102, 102));
+        txtEmail.setToolTipText("");
+        txtEmail.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Email", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 1, 14), new java.awt.Color(204, 0, 0))); // NOI18N
+        pnlSesion.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 330, 40));
 
         pnlLinea1.setBackground(new java.awt.Color(255, 0, 0));
         pnlLinea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
@@ -129,18 +131,7 @@ public class Login extends javax.swing.JPanel {
 
         PnlPrincipal.add(pnlRojo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 650));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 920, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(PnlPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 644, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        add(PnlPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 869, 619));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSesionActionPerformed
@@ -150,7 +141,7 @@ public class Login extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PnlPrincipal;
-    private javax.swing.JButton btnSesion;
+    public javax.swing.JButton btnSesion;
     private javax.swing.JLabel iconPass;
     private javax.swing.JLabel iconUser;
     private javax.swing.JLabel lblInicio;
@@ -158,7 +149,8 @@ public class Login extends javax.swing.JPanel {
     private javax.swing.JPanel pnlLinea2;
     private javax.swing.JPanel pnlRojo;
     private javax.swing.JPanel pnlSesion;
-    private javax.swing.JPasswordField pwdContra;
-    private javax.swing.JTextField txtNombre;
+    public javax.swing.JPasswordField pwdContra;
+    public javax.swing.JTextField txtEmail;
     // End of variables declaration//GEN-END:variables
+
 }

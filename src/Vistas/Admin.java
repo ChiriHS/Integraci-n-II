@@ -15,116 +15,161 @@ public class Admin extends javax.swing.JPanel {
 
         PFondo = new javax.swing.JPanel();
         PCRUD = new javax.swing.JPanel();
-        lvlNombre = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
-        lvlEmail = new javax.swing.JLabel();
-        lvlRol = new javax.swing.JLabel();
-        lvlClave = new javax.swing.JLabel();
         txtClave = new javax.swing.JPasswordField();
         txtEmail = new javax.swing.JTextField();
         cmbID = new javax.swing.JComboBox<>();
-        lvlID = new javax.swing.JLabel();
         cmbRol = new javax.swing.JComboBox<>();
+        btnBuscar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
         btnRegistrar = new javax.swing.JButton();
         btnModificar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
-        btnBuscar = new javax.swing.JButton();
-        btnLimpiar = new javax.swing.JButton();
-        PAsistencia = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         btnEntrada = new javax.swing.JButton();
         btnSalida = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PFondo.setBackground(new java.awt.Color(73, 80, 87));
+        PFondo.setBackground(new java.awt.Color(204, 0, 0));
         PFondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PCRUD.setBackground(new java.awt.Color(108, 117, 125));
+        PCRUD.setBackground(new java.awt.Color(255, 255, 255));
         PCRUD.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lvlNombre.setBackground(new java.awt.Color(2, 62, 138));
-        lvlNombre.setForeground(new java.awt.Color(33, 37, 41));
-        lvlNombre.setText("Nombre");
-        PCRUD.add(lvlNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
-        PCRUD.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 120, -1));
+        txtNombre.setBackground(new java.awt.Color(255, 255, 255));
+        txtNombre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtNombre.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 2, true), "Nombre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 1, 18), new java.awt.Color(255, 0, 0))); // NOI18N
+        PCRUD.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 270, -1));
 
-        lvlEmail.setForeground(new java.awt.Color(33, 37, 41));
-        lvlEmail.setText("Email");
-        PCRUD.add(lvlEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        txtClave.setBackground(new java.awt.Color(255, 255, 255));
+        txtClave.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtClave.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 2, true), "Clave", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 1, 18), new java.awt.Color(255, 0, 0))); // NOI18N
+        PCRUD.add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 240, -1));
 
-        lvlRol.setForeground(new java.awt.Color(33, 37, 41));
-        lvlRol.setText("Rol");
-        PCRUD.add(lvlRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, -1));
+        txtEmail.setBackground(new java.awt.Color(255, 255, 255));
+        txtEmail.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtEmail.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 2, true), "Email", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 1, 18), new java.awt.Color(255, 0, 0))); // NOI18N
+        PCRUD.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 270, -1));
 
-        lvlClave.setForeground(new java.awt.Color(33, 37, 41));
-        lvlClave.setText("Clave");
-        PCRUD.add(lvlClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, -1, -1));
-        PCRUD.add(txtClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 100, -1));
-        PCRUD.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 140, -1));
+        cmbID.setBackground(new java.awt.Color(255, 255, 255));
+        cmbID.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cmbID.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 2, true), "ID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 1, 18), new java.awt.Color(255, 0, 0))); // NOI18N
+        PCRUD.add(cmbID, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 90, 50));
 
-        PCRUD.add(cmbID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 60, -1));
-
-        lvlID.setForeground(new java.awt.Color(33, 37, 41));
-        lvlID.setText("ID");
-        PCRUD.add(lvlID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
-
+        cmbRol.setBackground(new java.awt.Color(255, 255, 255));
+        cmbRol.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         cmbRol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ADMIN", "USUARIO" }));
-        PCRUD.add(cmbRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 110, -1));
+        cmbRol.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 2, true), "Rol", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 1, 14), new java.awt.Color(255, 0, 0))); // NOI18N
+        PCRUD.add(cmbRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 140, 50));
 
-        btnRegistrar.setText("Registrar");
-        btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarActionPerformed(evt);
-            }
-        });
-        PCRUD.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
-
-        btnModificar.setText("Modificar");
-        btnModificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificarActionPerformed(evt);
-            }
-        });
-        PCRUD.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, -1));
-
-        btnEliminar.setText("Eliminar");
-        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarActionPerformed(evt);
-            }
-        });
-        PCRUD.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, -1, -1));
-
+        btnBuscar.setBackground(new java.awt.Color(255, 0, 0));
+        btnBuscar.setFont(new java.awt.Font("SimSun-ExtG", 1, 18)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
         btnBuscar.setText("Buscar");
+        btnBuscar.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3)));
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
             }
         });
-        PCRUD.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, -1));
+        PCRUD.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 110, 40));
 
+        btnLimpiar.setBackground(new java.awt.Color(255, 0, 0));
+        btnLimpiar.setFont(new java.awt.Font("SimSun-ExtG", 1, 18)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimpiarActionPerformed(evt);
             }
         });
-        PCRUD.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, -1, -1));
+        PCRUD.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 120, 40));
 
-        PFondo.add(PCRUD, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 380, 310));
+        jPanel2.setBackground(new java.awt.Color(204, 0, 0));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PAsistencia.setBackground(new java.awt.Color(108, 117, 125));
-        PAsistencia.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btnRegistrar.setBackground(new java.awt.Color(255, 255, 255));
+        btnRegistrar.setFont(new java.awt.Font("SimSun-ExtG", 1, 18)); // NOI18N
+        btnRegistrar.setForeground(new java.awt.Color(255, 0, 0));
+        btnRegistrar.setText("Registrar");
+        btnRegistrar.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true), new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true)));
+        btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 160, 60));
 
+        btnModificar.setBackground(new java.awt.Color(255, 255, 255));
+        btnModificar.setFont(new java.awt.Font("SimSun-ExtG", 1, 18)); // NOI18N
+        btnModificar.setForeground(new java.awt.Color(255, 0, 0));
+        btnModificar.setText("Modificar");
+        btnModificar.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true), new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true)));
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 140, 60));
+
+        btnEliminar.setBackground(new java.awt.Color(255, 255, 255));
+        btnEliminar.setFont(new java.awt.Font("SimSun-ExtG", 1, 18)); // NOI18N
+        btnEliminar.setForeground(new java.awt.Color(255, 0, 0));
+        btnEliminar.setText("Eliminar");
+        btnEliminar.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true), new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true)));
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 140, 60));
+
+        PCRUD.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 550, 180));
+
+        PFondo.add(PCRUD, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 590, 500));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnEntrada.setBackground(new java.awt.Color(255, 0, 0));
+        btnEntrada.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnEntrada.setForeground(new java.awt.Color(255, 255, 255));
         btnEntrada.setText("Entrada");
-        PAsistencia.add(btnEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 120, 60));
+        jPanel1.add(btnEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 160, 100));
 
+        btnSalida.setBackground(new java.awt.Color(255, 0, 0));
+        btnSalida.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnSalida.setForeground(new java.awt.Color(255, 255, 255));
         btnSalida.setText("Salida");
-        PAsistencia.add(btnSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 120, 60));
+        jPanel1.add(btnSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 160, 90));
 
-        PFondo.add(PAsistencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, 180, 310));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconEntrar.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 50, -1));
 
-        add(PFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 430));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconSalir.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, -1, -1));
+
+        PFondo.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 0, 290, 650));
+
+        jLabel1.setFont(new java.awt.Font("SimSun-ExtG", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText(" ADMINISTRADOR");
+        PFondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 280, 60));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconAdmin.png"))); // NOI18N
+        PFondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconAdmin.png"))); // NOI18N
+        PFondo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
+
+        add(PFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
@@ -149,7 +194,6 @@ public class Admin extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel PAsistencia;
     private javax.swing.JPanel PCRUD;
     private javax.swing.JPanel PFondo;
     public javax.swing.JButton btnBuscar;
@@ -161,11 +205,13 @@ public class Admin extends javax.swing.JPanel {
     private javax.swing.JButton btnSalida;
     public javax.swing.JComboBox<String> cmbID;
     public javax.swing.JComboBox<String> cmbRol;
-    private javax.swing.JLabel lvlClave;
-    private javax.swing.JLabel lvlEmail;
-    private javax.swing.JLabel lvlID;
-    private javax.swing.JLabel lvlNombre;
-    private javax.swing.JLabel lvlRol;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     public javax.swing.JPasswordField txtClave;
     public javax.swing.JTextField txtEmail;
     public javax.swing.JTextField txtNombre;

@@ -2,6 +2,7 @@ package Controlador;
 
 import DAO.Conexion;
 import DAO.DAOAdminImpl;
+import DAO.DAOAsistenciaImpl;
 import Vistas.Admin;
 import Vistas.Login2;
 import java.awt.BorderLayout;
@@ -60,6 +61,9 @@ public class ControladorLogin {
                         Admin panelAdmin = new Admin();
                         DAOAdminImpl daoAdmin = new DAOAdminImpl();
                         new ControladorAdmin(panelAdmin, daoAdmin);
+
+                        DAOAsistenciaImpl daoAsistencia = new DAOAsistenciaImpl();
+                        new ControladorAsistencia(panelAdmin, null, daoAsistencia);
 
                         panelAdmin.lvlBienvenidoAdmin.setText(nombre);
                         panelAdmin.lvlBienvenidoID.setText(id);

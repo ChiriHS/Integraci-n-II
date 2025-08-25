@@ -4,6 +4,8 @@
  */
 package Vistas;
 
+import DAO.Conexion;
+
 /**
  *
  * @author chris
@@ -13,7 +15,7 @@ public class User extends javax.swing.JPanel {
     /**
      * Creates new form User
      */
-    public User() {
+    public User(Conexion conexion) {
         initComponents();
     }
 

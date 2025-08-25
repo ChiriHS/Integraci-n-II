@@ -1,5 +1,7 @@
 package Vistas;
 
+import DAO.Conexion;
+
 public class Admin extends javax.swing.JPanel {
     
 

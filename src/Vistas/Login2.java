@@ -1,25 +1,21 @@
 package Vistas;
 
-import DAO.Conexion;
-import java.sql.PreparedStatement;
+import Controlador.ControladorLogin;
+import java.awt.BorderLayout;
 
 public class Login2 extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login2.class.getName());
-    
-    Conexion conexion = new Conexion();
 
     public Login2() {
         initComponents();
-        initComponents();
-        setSize(512, 502);
+        setSize(869, 619);
         setLocationRelativeTo(null);
-        setResizable(false);
         setTitle("Login");
         setVisible(true);
+        setResizable(false);
     }
-    
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -133,7 +129,7 @@ public class Login2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1038, Short.MAX_VALUE)
+            .addGap(0, 869, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -142,12 +138,12 @@ public class Login2 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 646, Short.MAX_VALUE)
+            .addGap(0, 619, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 13, Short.MAX_VALUE)
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(PnlPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 619, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 14, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -168,7 +164,7 @@ public class Login2 extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -179,7 +175,12 @@ public class Login2 extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Login2().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> {
+            Login2 vista = new Login2();
+            new ControladorLogin(vista);
+            vista.setVisible(true);
+        });
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

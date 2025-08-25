@@ -4,11 +4,10 @@ import Controlador.ControladorAdmin;
 import DAO.Conexion;
 import DAO.DAOAdminImpl;
 import Vistas.Admin;
-import javax.swing.JFrame;
 
 public class Principal {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
         /*
         Asistencia asistencia = new Asistencia();
         asistencia.setUsuarioId(1);
@@ -21,7 +20,7 @@ public class Principal {
             System.out.println(e.getMessage());
         } 
          */
-        /*
+ /*
         Admin vista = new Admin();          // 1. instanciar vista
         DAOAdminImpl dao = new DAOAdminImpl();  // 2. instanciar DAO
         ControladorAdmin controller = new ControladorAdmin(vista, dao); // 3. pasar vista al controlador

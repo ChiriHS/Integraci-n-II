@@ -90,35 +90,4 @@ public class DAOAdminImpl extends Conexion implements DAOAdmin {
         }
         return lista;
     }
-
-    @Override
-    public Usuario login(String email, String clave) throws Exception {
-        Usuario usuario = null;
-        try {
-            this.Conectar();
-            String sql = "SELECT * FROM Usuario WHERE email = ? AND clave = ?";
-            PreparedStatement st = this.conexion.prepareStatement(sql);
-            st.setString(1, email);
-            st.setString(2, clave);
-            ResultSet rs = st.executeQuery();
-
-            if (rs.next()) {
-                usuario = new Usuario();
-                usuario.setId(rs.getInt("id"));
-                usuario.setNombre(rs.getString("nombre"));
-                usuario.setEmail(rs.getString("email"));
-                usuario.setClave(rs.getString("clave"));
-                usuario.setRol(rs.getString("rol"));
-            }
-
-            rs.close();
-            st.close();
-        } catch (Exception e) {
-            throw e;
-        } finally {
-            this.cerrar();
-        }
-        return usuario;
-    }
-
 }

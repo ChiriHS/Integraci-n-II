@@ -10,8 +10,7 @@ public interface DAOAdmin {
     public void modificar (Usuario user) throws Exception;
     public void eliminar (Usuario user) throws Exception;
     public List<Usuario>  mostrar() throws Exception;
-    
-    public Usuario login (String email, String clave) throws Exception;
+
 
     
 

@@ -50,6 +50,8 @@ public class ControladorLogin {
 
             if (rs.next()) {
                 String rol = rs.getString("rol");
+                String nombre = rs.getString("nombre");
+                String id = rs.getString("id");
 
                 vista.setVisible(false); // ocultamos login
 
@@ -58,6 +60,9 @@ public class ControladorLogin {
                         Admin panelAdmin = new Admin();
                         DAOAdminImpl daoAdmin = new DAOAdminImpl();
                         new ControladorAdmin(panelAdmin, daoAdmin);
+
+                        panelAdmin.lvlBienvenidoAdmin.setText(nombre);
+                        panelAdmin.lvlBienvenidoID.setText(id);
 
                         JFrame frameAdmin = new JFrame("Panel Administrador");
                         frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

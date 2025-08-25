@@ -1,7 +1,5 @@
 package Vistas;
 
-import DAO.Conexion;
-
 public class Admin extends javax.swing.JPanel {
     
 
@@ -36,6 +34,9 @@ public class Admin extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        lvlBienvenido = new javax.swing.JLabel();
+        lvlBienvenidoAdmin = new javax.swing.JLabel();
+        lvlBienvenidoID = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -171,6 +172,11 @@ public class Admin extends javax.swing.JPanel {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconAdmin.png"))); // NOI18N
         PFondo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
 
+        lvlBienvenido.setText("Bienvenido: ");
+        PFondo.add(lvlBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, -1, -1));
+        PFondo.add(lvlBienvenidoAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
+        PFondo.add(lvlBienvenidoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, -1, -1));
+
         add(PFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -214,6 +220,9 @@ public class Admin extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lvlBienvenido;
+    public javax.swing.JLabel lvlBienvenidoAdmin;
+    public javax.swing.JLabel lvlBienvenidoID;
     public javax.swing.JPasswordField txtClave;
     public javax.swing.JTextField txtEmail;
     public javax.swing.JTextField txtNombre;

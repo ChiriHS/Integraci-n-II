@@ -145,12 +145,22 @@ public class Admin extends javax.swing.JPanel {
         btnEntrada.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnEntrada.setForeground(new java.awt.Color(255, 255, 255));
         btnEntrada.setText("Entrada");
+        btnEntrada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntradaActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 160, 100));
 
         btnSalida.setBackground(new java.awt.Color(255, 0, 0));
         btnSalida.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnSalida.setForeground(new java.awt.Color(255, 255, 255));
         btnSalida.setText("Salida");
+        btnSalida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalidaActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 160, 90));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconEntrar.png"))); // NOI18N
@@ -199,6 +209,14 @@ public class Admin extends javax.swing.JPanel {
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
 
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntradaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEntradaActionPerformed
+
+    private void btnSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalidaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

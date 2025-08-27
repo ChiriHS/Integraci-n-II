@@ -5,7 +5,7 @@ import DAO.DAOAdminImpl;
 import DAO.DAOAsistenciaImpl;
 import Vistas.Admin;
 import Vistas.Login2;
-import java.awt.BorderLayout;
+import Vistas.User;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JFrame;
@@ -15,6 +15,9 @@ public class ControladorLogin {
 
     private Conexion conexion;
     private Login2 vista;
+
+    Admin vistaA = new Admin();
+    User vistaU = new User();
 
     public ControladorLogin(Login2 vista) {
         this.vista = vista;
@@ -58,28 +61,40 @@ public class ControladorLogin {
 
                 switch (rol.toUpperCase()) {
                     case "ADMIN":
-                        Admin panelAdmin = new Admin();
+
                         DAOAdminImpl daoAdmin = new DAOAdminImpl();
-                        new ControladorAdmin(panelAdmin, daoAdmin);
+                        new ControladorAdmin(vistaA, daoAdmin);
 
                         DAOAsistenciaImpl daoAsistencia = new DAOAsistenciaImpl();
-                        new ControladorAsistencia(panelAdmin, null, daoAsistencia);
+                        new ControladorAsistencia(vistaA, vistaU, daoAsistencia);
 
-                        panelAdmin.lvlBienvenidoAdmin.setText(nombre);
-                        panelAdmin.lvlBienvenidoID.setText(id);
+                        vistaA.lvlBienvenidoAdmin.setText(nombre);
+                        vistaA.lvlBienvenidoID.setText(id);
 
                         JFrame frameAdmin = new JFrame("Panel Administrador");
                         frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                         frameAdmin.setSize(920, 650);
                         frameAdmin.setLocationRelativeTo(null);
-                        frameAdmin.setContentPane(panelAdmin);
+                        frameAdmin.setContentPane(vistaA);
                         frameAdmin.setResizable(false);
                         frameAdmin.setVisible(true);
                         break;
 
-                    case "USER":
-                        break;
+                    case "USUARIO":
+                        DAOAsistenciaImpl asistenciaDAO = new DAOAsistenciaImpl();
+                        new ControladorAsistencia(vistaA, vistaU, asistenciaDAO);
 
+                        vistaU.lvlBienvenidoNombre.setText(nombre);
+                        vistaU.lvlBienvenidoID.setText(id);
+
+                        JFrame frameUser = new JFrame("Panel Usuario");
+                        frameUser.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        frameUser.setSize(920, 650);
+                        frameUser.setLocationRelativeTo(null);
+                        frameUser.setContentPane(vistaU);
+                        frameUser.setResizable(false);
+                        frameUser.setVisible(true);
+                        break;
                     default:
                         JOptionPane.showMessageDialog(null, "Rol desconocido: " + rol);
                         vista.setVisible(true); // volvemos al login

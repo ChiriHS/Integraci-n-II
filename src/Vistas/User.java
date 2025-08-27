@@ -15,7 +15,7 @@ public class User extends javax.swing.JPanel {
     /**
      * Creates new form User
      */
-    public User(Conexion conexion) {
+    public User() {
         initComponents();
     }
 
@@ -32,6 +32,9 @@ public class User extends javax.swing.JPanel {
         jPanel7 = new javax.swing.JPanel();
         btnEntrada = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        lvlBienvenido = new javax.swing.JLabel();
+        lvlBienvenidoNombre = new javax.swing.JLabel();
+        lvlBienvenidoID = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         btnSalida = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -50,6 +53,16 @@ public class User extends javax.swing.JPanel {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconSalir.png"))); // NOI18N
         jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, -1));
+
+        lvlBienvenido.setForeground(new java.awt.Color(0, 0, 0));
+        lvlBienvenido.setText("Bienvenido: ");
+        jPanel7.add(lvlBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
+
+        lvlBienvenidoNombre.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel7.add(lvlBienvenidoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
+
+        lvlBienvenidoID.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel7.add(lvlBienvenidoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, -1, -1));
 
         jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 650));
 
@@ -89,5 +102,8 @@ public class User extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JLabel lvlBienvenido;
+    public javax.swing.JLabel lvlBienvenidoID;
+    public javax.swing.JLabel lvlBienvenidoNombre;
     // End of variables declaration//GEN-END:variables
 }

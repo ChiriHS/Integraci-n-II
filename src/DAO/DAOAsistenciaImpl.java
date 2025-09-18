@@ -31,7 +31,7 @@ public class DAOAsistenciaImpl extends Conexion implements DAOAsistencia {
                 throw new Exception("Ya marcaste entrada hoy");
             }
 
-            String sql = "INSERT INTO Asistencia (UsuarioId, HoraEntrada) VALUES (?, ?)";
+            String sql = "INSERT INTO asistencia (UsuarioId, HoraEntrada) VALUES (?, ?)";
             PreparedStatement st = this.conexion.prepareStatement(sql);
             st.setInt(1, asistencia.getUsuarioId());
             st.setTimestamp(2, java.sql.Timestamp.valueOf(asistencia.getHoraEntrada()));
@@ -51,7 +51,7 @@ public class DAOAsistenciaImpl extends Conexion implements DAOAsistencia {
         }
         try {
             this.Conectar();
-            String sql = "UPDATE Asistencia SET HoraSalida = ? "
+            String sql = "UPDATE asistencia SET HoraSalida = ? "
                     + "WHERE UsuarioId = ? AND DATE(HoraEntrada) = CURRENT_DATE AND HoraSalida IS NULL";
             PreparedStatement st = this.conexion.prepareStatement(sql);
             st.setTimestamp(1, java.sql.Timestamp.valueOf(asistencia.getHoraSalida()));
@@ -74,7 +74,7 @@ public class DAOAsistenciaImpl extends Conexion implements DAOAsistencia {
     @Override
     public List<Asistencia> mostrar() throws Exception {
         List<Asistencia> lista = new ArrayList<>();
-        String sql = "SELECT UsuarioId, HoraEntrada, HoraSalida FROM Asistencia ORDER BY HoraEntrada DESC";
+        String sql = "SELECT UsuarioId, HoraEntrada, HoraSalida FROM asistencia ORDER BY HoraEntrada DESC";
 
         try (PreparedStatement ps = conexion.prepareStatement(sql); ResultSet rs = ps.executeQuery()) {
 

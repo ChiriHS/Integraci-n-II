@@ -9,7 +9,6 @@ import Modelo.Usuario;
 import javax.swing.*;
 import java.util.List;
 import Controlador.ControladorLogin;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.table.DefaultTableModel;
@@ -21,6 +20,7 @@ import java.io.FileOutputStream;
 
 public class ControladorAdmin {
 
+    //Hola xd
     private Admin vista;
     public Reportes vista4;
     public ReportesGeneral vista3;

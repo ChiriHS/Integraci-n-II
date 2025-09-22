@@ -51,7 +51,7 @@ public class ControladorLogin {
 
         try {
             conexion.Conectar();
-            String sql = "SELECT * FROM Usuario WHERE email = ? AND clave = ?";
+            String sql = "SELECT * FROM usuario WHERE email = ? AND clave = ?";
             PreparedStatement st = conexion.Conectar().prepareStatement(sql);
             st.setString(1, email);
             st.setString(2, clave);

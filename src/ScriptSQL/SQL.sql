@@ -15,7 +15,7 @@ CREATE TABLE asistencia(
     UsuarioId BIGINT,
     HoraEntrada DATETIME,
     HoraSalida DATETIME,
-    FOREIGN KEY (UsuarioId) REFERENCES usuario (id) ON DELETE CASCADE;
+    FOREIGN KEY (UsuarioId) REFERENCES usuario (id) ON DELETE CASCADE
 );
 
 INSERT INTO usuario (nombre, email, clave, rol) VALUES 

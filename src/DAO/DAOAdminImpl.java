@@ -16,7 +16,7 @@ public class DAOAdminImpl extends Conexion implements DAOAdmin {
     public void registrar(Usuario user) throws Exception {
         try {
             this.Conectar();
-            String sql = "INSERT INTO Usuario (nombre, email, clave, rol) VALUES (?, ?, ?, ?)";
+            String sql = "INSERT INTO usuario (nombre, email, clave, rol) VALUES (?, ?, ?, ?)";
             PreparedStatement st = this.conexion.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             st.setString(1, user.getNombre());
             st.setString(2, user.getEmail());
@@ -41,7 +41,7 @@ public class DAOAdminImpl extends Conexion implements DAOAdmin {
     public void modificar(Usuario user) throws Exception {
         try {
             this.Conectar();
-            String sql = "UPDATE Usuario SET nombre = ?, email = ?, clave = ?, rol = ? WHERE id = ?";
+            String sql = "UPDATE usuario SET nombre = ?, email = ?, clave = ?, rol = ? WHERE id = ?";
             PreparedStatement st = this.conexion.prepareStatement(sql);
             st.setString(1, user.getNombre());
             st.setString(2, user.getEmail());
@@ -175,7 +175,7 @@ public class DAOAdminImpl extends Conexion implements DAOAdmin {
         try {
             this.Conectar();
             String sql = "SELECT u.id, u.nombre, DATE(a.HoraEntrada) AS fecha, "
-                    + "TIME(A.HoraEntrada) AS hora "
+                    + "TIME(a.HoraEntrada) AS hora "
                     + "FROM usuario u "
                     + "JOIN asistencia a ON u.id = a.UsuarioId "
                     + "WHERE DATE(a.HoraEntrada) <= CURDATE() AND TIME(a.HoraEntrada) > '09:30:00' ";

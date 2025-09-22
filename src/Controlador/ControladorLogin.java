@@ -6,6 +6,8 @@ import DAO.DAOAsistenciaImpl;
 import Vistas.Admin;
 import Vistas.Login2;
 import Vistas.User;
+import Vistas.Reportes;
+import Vistas.ReportesGeneral;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JFrame;
@@ -15,6 +17,9 @@ public class ControladorLogin {
 
     private Conexion conexion;
     private Login2 vista;
+    private Reportes vista4;
+    private ReportesGeneral vista3;
+    private JFrame frameUser;
 
     Admin vistaA = new Admin();
     User vistaU = new User();
@@ -22,8 +27,9 @@ public class ControladorLogin {
     public ControladorLogin(Login2 vista) {
         this.vista = vista;
         this.conexion = new Conexion();
+        
+        this.vista.getRootPane().setDefaultButton(this.vista.btnSesion);
 
-        // Acción del botón de login
         this.vista.btnSesion.addActionListener(e -> {
             try {
                 login();
@@ -57,47 +63,68 @@ public class ControladorLogin {
                 String nombre = rs.getString("nombre");
                 String id = rs.getString("id");
 
-                vista.setVisible(false); // ocultamos login
+                vista.setVisible(false);
 
                 switch (rol.toUpperCase()) {
                     case "ADMIN":
-
-                        DAOAdminImpl daoAdmin = new DAOAdminImpl();
-                        new ControladorAdmin(vistaA, daoAdmin);
-
-                        DAOAsistenciaImpl daoAsistencia = new DAOAsistenciaImpl();
-                        new ControladorAsistencia(vistaA, vistaU, daoAsistencia);
 
                         vistaA.lvlBienvenidoAdmin.setText(nombre);
                         vistaA.lvlBienvenidoID.setText(id);
 
                         JFrame frameAdmin = new JFrame("Panel Administrador");
                         frameAdmin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                        frameAdmin.setSize(920, 650);
+                        frameAdmin.setSize(970, 680);
                         frameAdmin.setLocationRelativeTo(null);
                         frameAdmin.setContentPane(vistaA);
                         frameAdmin.setResizable(false);
+
+                        DAOAdminImpl daoAdmin = new DAOAdminImpl();
+                        new ControladorAdmin(vistaA, daoAdmin, frameAdmin, vista3, vista4);
+
+                        DAOAsistenciaImpl daoAsistencia = new DAOAsistenciaImpl();
+                        new ControladorAsistencia(vistaA, vistaU, daoAsistencia, frameUser);
+
+                        vistaA.lvlBienvenidoAdmin.setText(nombre);
+                        vistaA.lvlBienvenidoID.setText(id);
+
+                        if (daoAsistencia.tieneEntradaHoy(Integer.parseInt(id))) {
+                            vistaU.btnEntrada.setEnabled(false);
+                        }
+                        if (daoAsistencia.tieneSalidaHoy(Integer.parseInt(id))) {
+                            vistaU.btnSalida.setEnabled(false);
+                        }
+
                         frameAdmin.setVisible(true);
                         break;
 
                     case "USUARIO":
+
+                        JFrame frameUser = new JFrame("Panel Usuario");
+                        frameUser.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        frameUser.setSize(970, 690);
+                        frameUser.setLocationRelativeTo(null);
+                        frameUser.setContentPane(vistaU);
+                        frameUser.setResizable(false);
+
                         DAOAsistenciaImpl asistenciaDAO = new DAOAsistenciaImpl();
-                        new ControladorAsistencia(vistaA, vistaU, asistenciaDAO);
+                        new ControladorAsistencia(vistaA, vistaU, asistenciaDAO, frameUser);
 
                         vistaU.lvlBienvenidoNombre.setText(nombre);
                         vistaU.lvlBienvenidoID.setText(id);
 
-                        JFrame frameUser = new JFrame("Panel Usuario");
-                        frameUser.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                        frameUser.setSize(920, 650);
-                        frameUser.setLocationRelativeTo(null);
-                        frameUser.setContentPane(vistaU);
-                        frameUser.setResizable(false);
+                        if (asistenciaDAO.tieneEntradaHoy(Integer.parseInt(id))) {
+                            vistaU.btnEntrada.setEnabled(false);
+                        }
+                        if (asistenciaDAO.tieneSalidaHoy(Integer.parseInt(id))) {
+                            vistaU.btnSalida.setEnabled(false);
+                        }
+                        
                         frameUser.setVisible(true);
                         break;
                     default:
                         JOptionPane.showMessageDialog(null, "Rol desconocido: " + rol);
-                        vista.setVisible(true); // volvemos al login
+                        vista.setVisible(true);
+
                         return;
                 }
 

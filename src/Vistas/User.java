@@ -17,6 +17,7 @@ public class User extends javax.swing.JPanel {
      */
     public User() {
         initComponents();
+        
     }
 
     /**
@@ -35,9 +36,13 @@ public class User extends javax.swing.JPanel {
         lvlBienvenido = new javax.swing.JLabel();
         lvlBienvenidoNombre = new javax.swing.JLabel();
         lvlBienvenidoID = new javax.swing.JLabel();
+        pnlLinea1 = new javax.swing.JPanel();
+        pnlLinea2 = new javax.swing.JPanel();
+        lvlBienvenido1 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        btnSalida = new javax.swing.JButton();
+        btnCerrarSesion2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnSalida = new javax.swing.JButton();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -46,38 +51,88 @@ public class User extends javax.swing.JPanel {
 
         btnEntrada.setBackground(new java.awt.Color(204, 0, 0));
         btnEntrada.setFont(new java.awt.Font("SimSun-ExtG", 1, 24)); // NOI18N
+        btnEntrada.setForeground(new java.awt.Color(255, 255, 255));
         btnEntrada.setText("Entrada");
         btnEntrada.setToolTipText("");
         btnEntrada.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 0, 0), 3, true), new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true)));
-        jPanel7.add(btnEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 220, 80));
+        jPanel7.add(btnEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 220, 80));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconSalir.png"))); // NOI18N
-        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, -1));
+        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
-        lvlBienvenido.setForeground(new java.awt.Color(0, 0, 0));
-        lvlBienvenido.setText("Bienvenido: ");
-        jPanel7.add(lvlBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
+        lvlBienvenido.setBackground(new java.awt.Color(255, 0, 0));
+        lvlBienvenido.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lvlBienvenido.setForeground(new java.awt.Color(255, 0, 0));
+        lvlBienvenido.setText("ID: ");
+        jPanel7.add(lvlBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
 
-        lvlBienvenidoNombre.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel7.add(lvlBienvenidoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, -1, -1));
+        lvlBienvenidoNombre.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lvlBienvenidoNombre.setForeground(new java.awt.Color(255, 0, 0));
+        jPanel7.add(lvlBienvenidoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 200, 40));
 
-        lvlBienvenidoID.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel7.add(lvlBienvenidoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, -1, -1));
+        lvlBienvenidoID.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lvlBienvenidoID.setForeground(new java.awt.Color(255, 0, 0));
+        jPanel7.add(lvlBienvenidoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 80, 40));
+
+        pnlLinea1.setBackground(new java.awt.Color(255, 0, 0));
+        pnlLinea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+
+        javax.swing.GroupLayout pnlLinea1Layout = new javax.swing.GroupLayout(pnlLinea1);
+        pnlLinea1.setLayout(pnlLinea1Layout);
+        pnlLinea1Layout.setHorizontalGroup(
+            pnlLinea1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 354, Short.MAX_VALUE)
+        );
+        pnlLinea1Layout.setVerticalGroup(
+            pnlLinea1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 4, Short.MAX_VALUE)
+        );
+
+        jPanel7.add(pnlLinea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 360, 10));
+
+        pnlLinea2.setBackground(new java.awt.Color(255, 0, 0));
+        pnlLinea2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+
+        javax.swing.GroupLayout pnlLinea2Layout = new javax.swing.GroupLayout(pnlLinea2);
+        pnlLinea2.setLayout(pnlLinea2Layout);
+        pnlLinea2Layout.setHorizontalGroup(
+            pnlLinea2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 84, Short.MAX_VALUE)
+        );
+        pnlLinea2Layout.setVerticalGroup(
+            pnlLinea2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 4, Short.MAX_VALUE)
+        );
+
+        jPanel7.add(pnlLinea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 90, -1));
+
+        lvlBienvenido1.setBackground(new java.awt.Color(255, 0, 0));
+        lvlBienvenido1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lvlBienvenido1.setForeground(new java.awt.Color(255, 0, 0));
+        lvlBienvenido1.setText("Bienvenido: ");
+        jPanel7.add(lvlBienvenido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 110, -1));
 
         jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 650));
 
         jPanel8.setBackground(new java.awt.Color(204, 0, 0));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnCerrarSesion2.setBackground(new java.awt.Color(255, 255, 255));
+        btnCerrarSesion2.setFont(new java.awt.Font("SimSun-ExtG", 1, 24)); // NOI18N
+        btnCerrarSesion2.setForeground(new java.awt.Color(204, 0, 0));
+        btnCerrarSesion2.setText("Cerrar Sesion");
+        btnCerrarSesion2.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true), new javax.swing.border.LineBorder(new java.awt.Color(204, 0, 0), 3, true)));
+        jPanel8.add(btnCerrarSesion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 580, 180, 50));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconEntrar.png"))); // NOI18N
+        jPanel8.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 50, 60));
+
         btnSalida.setBackground(new java.awt.Color(255, 255, 255));
         btnSalida.setFont(new java.awt.Font("SimSun-ExtG", 1, 24)); // NOI18N
         btnSalida.setForeground(new java.awt.Color(204, 0, 0));
         btnSalida.setText("Salida");
         btnSalida.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 3, true), new javax.swing.border.LineBorder(new java.awt.Color(204, 0, 0), 3, true)));
-        jPanel8.add(btnSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 220, 80));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconEntrar.png"))); // NOI18N
-        jPanel8.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 50, 60));
+        jPanel8.add(btnSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 220, 80));
 
         jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 0, 490, 650));
 
@@ -95,6 +150,7 @@ public class User extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnCerrarSesion2;
     public javax.swing.JButton btnEntrada;
     public javax.swing.JButton btnSalida;
     private javax.swing.JLabel jLabel1;
@@ -103,7 +159,10 @@ public class User extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JLabel lvlBienvenido;
+    private javax.swing.JLabel lvlBienvenido1;
     public javax.swing.JLabel lvlBienvenidoID;
     public javax.swing.JLabel lvlBienvenidoNombre;
+    private javax.swing.JPanel pnlLinea1;
+    private javax.swing.JPanel pnlLinea2;
     // End of variables declaration//GEN-END:variables
 }

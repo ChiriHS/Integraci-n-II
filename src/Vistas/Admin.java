@@ -1,11 +1,14 @@
 package Vistas;
 
+import java.awt.event.KeyEvent;
+
 public class Admin extends javax.swing.JPanel {
     
 
     public Admin() {
         initComponents();
         setSize(675, 424);
+        
     }
 
     
@@ -20,23 +23,25 @@ public class Admin extends javax.swing.JPanel {
         txtEmail = new javax.swing.JTextField();
         cmbID = new javax.swing.JComboBox<>();
         cmbRol = new javax.swing.JComboBox<>();
-        btnBuscar = new javax.swing.JButton();
-        btnLimpiar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         btnRegistrar = new javax.swing.JButton();
         btnModificar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
+        lvlBienvenidoID = new javax.swing.JLabel();
+        btnBuscar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         btnEntrada = new javax.swing.JButton();
         btnSalida = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        btnCerrarSesion = new javax.swing.JButton();
+        btnReporte = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         lvlBienvenido = new javax.swing.JLabel();
         lvlBienvenidoAdmin = new javax.swing.JLabel();
-        lvlBienvenidoID = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -49,6 +54,16 @@ public class Admin extends javax.swing.JPanel {
         txtNombre.setBackground(new java.awt.Color(255, 255, 255));
         txtNombre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtNombre.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 2, true), "Nombre", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 1, 18), new java.awt.Color(255, 0, 0))); // NOI18N
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreKeyTyped(evt);
+            }
+        });
         PCRUD.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 270, -1));
 
         txtClave.setBackground(new java.awt.Color(255, 255, 255));
@@ -64,36 +79,23 @@ public class Admin extends javax.swing.JPanel {
         cmbID.setBackground(new java.awt.Color(255, 255, 255));
         cmbID.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         cmbID.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 2, true), "ID", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 1, 18), new java.awt.Color(255, 0, 0))); // NOI18N
+        cmbID.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cmbIDKeyTyped(evt);
+            }
+        });
         PCRUD.add(cmbID, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 90, 50));
 
         cmbRol.setBackground(new java.awt.Color(255, 255, 255));
         cmbRol.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         cmbRol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ADMIN", "USUARIO" }));
         cmbRol.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 2, true), "Rol", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 1, 14), new java.awt.Color(255, 0, 0))); // NOI18N
+        cmbRol.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cmbRolKeyTyped(evt);
+            }
+        });
         PCRUD.add(cmbRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 140, 50));
-
-        btnBuscar.setBackground(new java.awt.Color(255, 0, 0));
-        btnBuscar.setFont(new java.awt.Font("SimSun-ExtG", 1, 18)); // NOI18N
-        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscar.setText("Buscar");
-        btnBuscar.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3)));
-        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarActionPerformed(evt);
-            }
-        });
-        PCRUD.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 110, 40));
-
-        btnLimpiar.setBackground(new java.awt.Color(255, 0, 0));
-        btnLimpiar.setFont(new java.awt.Font("SimSun-ExtG", 1, 18)); // NOI18N
-        btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
-        btnLimpiar.setText("Limpiar");
-        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarActionPerformed(evt);
-            }
-        });
-        PCRUD.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 120, 40));
 
         jPanel2.setBackground(new java.awt.Color(204, 0, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -136,6 +138,33 @@ public class Admin extends javax.swing.JPanel {
 
         PCRUD.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 550, 180));
 
+        lvlBienvenidoID.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lvlBienvenidoID.setForeground(new java.awt.Color(255, 255, 255));
+        PCRUD.add(lvlBienvenidoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 10, 10));
+
+        btnBuscar.setBackground(new java.awt.Color(255, 0, 0));
+        btnBuscar.setFont(new java.awt.Font("SimSun-ExtG", 1, 18)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setText("Buscar");
+        btnBuscar.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3)));
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
+        PCRUD.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 110, 40));
+
+        btnLimpiar.setBackground(new java.awt.Color(255, 0, 0));
+        btnLimpiar.setFont(new java.awt.Font("SimSun-ExtG", 1, 18)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+        PCRUD.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 120, 40));
+
         PFondo.add(PCRUD, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 590, 500));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -150,7 +179,7 @@ public class Admin extends javax.swing.JPanel {
                 btnEntradaActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 160, 100));
+        jPanel1.add(btnEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 160, 100));
 
         btnSalida.setBackground(new java.awt.Color(255, 0, 0));
         btnSalida.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -161,20 +190,43 @@ public class Admin extends javax.swing.JPanel {
                 btnSalidaActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 160, 90));
+        jPanel1.add(btnSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 160, 90));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconEntrar.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 50, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 50, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconSalir.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, -1, -1));
 
-        PFondo.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 0, 290, 650));
+        btnCerrarSesion.setBackground(new java.awt.Color(255, 0, 0));
+        btnCerrarSesion.setFont(new java.awt.Font("SimSun-ExtG", 1, 18)); // NOI18N
+        btnCerrarSesion.setForeground(new java.awt.Color(255, 255, 255));
+        btnCerrarSesion.setText("Cerrar Sesion");
+        btnCerrarSesion.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 0), 3, true), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3)));
+        btnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSesionActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 590, 170, 50));
+
+        btnReporte.setBackground(new java.awt.Color(255, 0, 0));
+        btnReporte.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        btnReporte.setForeground(new java.awt.Color(255, 255, 255));
+        btnReporte.setText("Reportes");
+        btnReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReporteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnReporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 180, 50));
+
+        PFondo.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 0, 330, 650));
 
         jLabel1.setFont(new java.awt.Font("SimSun-ExtG", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText(" ADMINISTRADOR");
-        PFondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 280, 60));
+        PFondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 280, 60));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconAdmin.png"))); // NOI18N
         PFondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, -1, -1));
@@ -182,12 +234,16 @@ public class Admin extends javax.swing.JPanel {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconAdmin.png"))); // NOI18N
         PFondo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
 
+        lvlBienvenido.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lvlBienvenido.setForeground(new java.awt.Color(255, 255, 255));
         lvlBienvenido.setText("Bienvenido: ");
-        PFondo.add(lvlBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, -1, -1));
-        PFondo.add(lvlBienvenidoAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
-        PFondo.add(lvlBienvenidoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, -1, -1));
+        PFondo.add(lvlBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
 
-        add(PFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 650));
+        lvlBienvenidoAdmin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lvlBienvenidoAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        PFondo.add(lvlBienvenidoAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 140, 40));
+
+        add(PFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 650));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
@@ -202,13 +258,9 @@ public class Admin extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
-    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+    private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
 
-    }//GEN-LAST:event_btnBuscarActionPerformed
-
-    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-
-    }//GEN-LAST:event_btnLimpiarActionPerformed
+    }//GEN-LAST:event_btnCerrarSesionActionPerformed
 
     private void btnEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntradaActionPerformed
         // TODO add your handling code here:
@@ -218,16 +270,52 @@ public class Admin extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSalidaActionPerformed
 
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+        char c = evt.getKeyChar();
+        if (!Character.isLetter(c) && c != ' ' && c != KeyEvent.VK_BACK_SPACE) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtNombreKeyTyped
+
+    private void cmbIDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbIDKeyTyped
+        char c = evt.getKeyChar();
+        if (!Character.isDigit(c) && c != KeyEvent.VK_BACK_SPACE) {
+            evt.consume(); 
+        }
+    }//GEN-LAST:event_cmbIDKeyTyped
+
+    private void cmbRolKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbRolKeyTyped
+        evt.consume();
+    }//GEN-LAST:event_cmbRolKeyTyped
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
+
+    }//GEN-LAST:event_btnReporteActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PCRUD;
     private javax.swing.JPanel PFondo;
     public javax.swing.JButton btnBuscar;
+    public javax.swing.JButton btnCerrarSesion;
     public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnEntrada;
     public javax.swing.JButton btnLimpiar;
     public javax.swing.JButton btnModificar;
     public javax.swing.JButton btnRegistrar;
+    public javax.swing.JButton btnReporte;
     public javax.swing.JButton btnSalida;
     public javax.swing.JComboBox<String> cmbID;
     public javax.swing.JComboBox<String> cmbRol;

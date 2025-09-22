@@ -9,7 +9,7 @@ public class Login2 extends javax.swing.JFrame {
 
     public Login2() {
         initComponents();
-        setSize(869, 619);
+        setSize(869, 630);
         setLocationRelativeTo(null);
         setTitle("Login");
         setVisible(true);
@@ -84,6 +84,11 @@ public class Login2 extends javax.swing.JFrame {
                 btnSesionActionPerformed(evt);
             }
         });
+        btnSesion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnSesionKeyPressed(evt);
+            }
+        });
         pnlSesion.add(btnSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 170, 80));
 
         pnlLinea2.setBackground(new java.awt.Color(255, 0, 0));
@@ -108,7 +113,7 @@ public class Login2 extends javax.swing.JFrame {
         iconUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vistas/Iconos/iconUser.png"))); // NOI18N
         pnlSesion.add(iconUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
-        PnlPrincipal.add(pnlSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 490, 530));
+        PnlPrincipal.add(pnlSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 490, 530));
 
         pnlRojo.setBackground(new java.awt.Color(204, 0, 0));
 
@@ -116,14 +121,14 @@ public class Login2 extends javax.swing.JFrame {
         pnlRojo.setLayout(pnlRojoLayout);
         pnlRojoLayout.setHorizontalGroup(
             pnlRojoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
         pnlRojoLayout.setVerticalGroup(
             pnlRojoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 650, Short.MAX_VALUE)
         );
 
-        PnlPrincipal.add(pnlRojo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 650));
+        PnlPrincipal.add(pnlRojo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 650));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -131,19 +136,15 @@ public class Login2 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 869, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(PnlPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 869, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(PnlPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 869, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 619, Short.MAX_VALUE)
+            .addGap(0, 630, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(PnlPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 619, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(PnlPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 630, Short.MAX_VALUE))
         );
 
         pack();
@@ -152,6 +153,10 @@ public class Login2 extends javax.swing.JFrame {
     private void btnSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSesionActionPerformed
 
     }//GEN-LAST:event_btnSesionActionPerformed
+
+    private void btnSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnSesionKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSesionKeyPressed
 
     /**
      * @param args the command line arguments

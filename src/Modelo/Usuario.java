@@ -6,7 +6,7 @@ public class Usuario {
     private String Nombre;
     private String Email;
     private String Clave;
-    private String Rol; //Administrador o Usuario
+    private String Rol; 
 
     public Usuario() {
     }
